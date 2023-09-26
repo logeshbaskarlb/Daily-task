@@ -119,3 +119,42 @@ let N = Array.length;
 let K = 5;
 
 RightRotate(Array, N, K);
+
+//ARROW FUNCTION
+//1)Print odd numbers in an array
+var num1 =(a,b) =>{
+  return a+b;
+};
+console.log(num1(2,4));
+
+//2)Convert all the strings to title caps in a string array
+const strs= ["hello","world"];
+strs.map((str)=>{
+  return str.toUpperCase()
+});
+console.log("After converting:",strs);
+
+//3)Sum of all numbers in an array
+
+var total=0;
+var num0 =[2,2,4,5,6,7];
+for(var i=0;i<num0.length;total += num0[i++]);
+
+console.log('total', total)
+
+//4)Return all the prime numbers in an array
+const newArray = [1, 3, 2, 5, 10,11,23,12,33,234,17];
+const isPrime = num => {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return num !== 1;
+};
+const myPrimeArray = newArray.filter(element => isPrime(element));
+console.log(myPrimeArray);
+
+//4)Return all the palindromes in an array
+
+const getAllPalindromes = (words) => words.filter((word) => word.split("").reverse().join("") === word);
+
+console.log(getAllPalindromes(["hello", "noon"]));
